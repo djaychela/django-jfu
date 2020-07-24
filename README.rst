@@ -14,17 +14,17 @@ If you seek a tool to ease the integration of jQuery File Upload into your
 Django application while still having a great degree of freedom, you may find
 this package useful.
 
-Demo_
+This version is updated to work with Django 3.0, as it seems that the library has been abandoned.
 
-.. _Demo: http://djfu-demo.cidola.com
 
 Installation
 ------------
 
-1. ``pip install django-jfu``.
-2. Add 'jfu' to ``INSTALLED_APPS`` in your project settings.py file.
-3. Add 'django.core.context_processors.request' and 'django.core.context_processors.static' to ``TEMPLATE_CONTEXT_PROCESSORS`` in settings.py.
-4. Run `python manage.py collectstatic`.
+1. clone the repo.
+2. build the repo with ``setup.py build`` then ``setup.py install``
+3. Add 'jfu' to ``INSTALLED_APPS`` in your project settings.py file.
+4. Add 'django.core.context_processors.request' and 'django.core.context_processors.static' to ``TEMPLATE_CONTEXT_PROCESSORS`` in settings.py.
+5. Run `python manage.py collectstatic`.
 
 
 Usage
