@@ -1,6 +1,6 @@
-----------------------------------------------------
-Django-JFU - A Django Library for jQuery File Upload 
-----------------------------------------------------
+--------------------------------------------------------------------
+Django-JFU - A Django Library for jQuery File Upload for Django 3.0+
+--------------------------------------------------------------------
 
 Django-JFU is designed to simplify the tasks involved in integrating jQuery
 File Upload (https://github.com/blueimp/jquery-file-upload) into Django.
