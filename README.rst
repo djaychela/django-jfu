@@ -17,9 +17,9 @@ this package useful.
 This version is updated to work with Django 3.0, as it seems that the library has been abandoned.
 This involved changes to the jfu template tag (which used functions removed before even Django 2 existed,
 as well as updating the demo project so that it would work out-of-the-box with v3, while removing extraneous code.
-`photo_upload_form.html` is included in the demo project, rather than in the jfu folder.
+``photo_upload_form.html`` is included in the demo project, rather than in the jfu folder.
 
-To allow rendering of the contents of the .html and .py files in the demo project (to allow the user to see the relevant code), the `custom_tags.py` file includes two template tags - `verbatim_include` and `verbatim_include_py` which allow the file contents to be rendered within the template (this re-creates roughly the functionality of the pre-django 1.10 `ssi` template tag).
+To allow rendering of the contents of the .html and .py files in the demo project (to allow the user to see the relevant code), the ``custom_tags.py`` file includes two template tags - ``verbatim_include`` and ``verbatim_include_py`` which allow the file contents to be rendered within the template (this re-creates roughly the functionality of the pre-django 1.10 ``ssi`` template tag).
 
 
 Installation
