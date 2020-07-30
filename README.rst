@@ -15,6 +15,11 @@ Django application while still having a great degree of freedom, you may find
 this package useful.
 
 This version is updated to work with Django 3.0, as it seems that the library has been abandoned.
+This involved changes to the jfu template tag (which used functions removed before even Django 2 existed,
+as well as updating the demo project so that it would work out-of-the-box with v3, while removing extraneous code.
+`photo_upload_form.html` is included in the demo project, rather than in the jfu folder.
+
+To allow rendering of the contents of the .html and .py files in the demo project (to allow the user to see the relevant code), the `custom_tags.py` file includes two template tags - `verbatim_include` and `verbatim_include_py` which allow the file contents to be rendered within the template (this re-creates roughly the functionality of the pre-django 1.10 `ssi` template tag).
 
 
 Installation
@@ -23,8 +28,7 @@ Installation
 1. clone the repo.
 2. build the repo with ``setup.py build`` then ``setup.py install``
 3. Add 'jfu' to ``INSTALLED_APPS`` in your project settings.py file.
-4. Add 'django.core.context_processors.request' and 'django.core.context_processors.static' to ``TEMPLATE_CONTEXT_PROCESSORS`` in settings.py.
-5. Run `python manage.py collectstatic`.
+4. Run `python manage.py collectstatic`.
 
 
 Usage
@@ -49,10 +53,10 @@ Here is an example implementation:
 In your ``urls.py`` file::
 
     ...
-    url( r'upload/', views.upload, name = 'jfu_upload' ),
+    path( 'upload/', views.upload, name = 'jfu_upload' ),
 
     # You may optionally define a delete url as well
-    url( r'^delete/(?P<pk>\d+)$', views.upload_delete, name = 'jfu_delete' ),
+    path( 'delete/<int:pk>', views.upload_delete, name = 'jfu_delete' ),
 
 In your ``views.py`` file::
     
