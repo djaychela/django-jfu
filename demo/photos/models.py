@@ -4,4 +4,4 @@ from demo.settings import MEDIA_ROOT
 # Create your models here.
 
 class Photo( models.Model ):
-    file = models.FileField( upload_to = 'media/' )
+    file = models.FileField( upload_to = 'photos/%Y/%m/%d/' )

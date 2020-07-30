@@ -6,3 +6,6 @@ demo/media
 dist/
 django_jfu.egg-info/
 build/
+demo/db.sqlite3
+.DS_Store
+.vscode
